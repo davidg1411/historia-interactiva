@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Historia Interactiva</title>
+         <meta charset="UTF-8">
+        <link href="css/estils.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="background" >
+			<div id="pantalla1">
+				<img  id="background_image1" src="images/image1.jpg">
+				<div id="notebook">
+					<img id="notebook_img" src="images/notebook.png">
+					<div id="notebook_text">
+						<p>
+							Ets un detectiu privat que investiga el cas de la familia Collins. La nena de 7 anys, Evelyn Collins, va desaparèixer de casa misteriosament mentre els seus pares dormien. Quan es van despertar ja no hi era i no va deixar cap rastre, només un símbol religiós a la paret.
+						</p>
+						
+						<p>
+							Fa dues setmanes que la nena va desaparèixer i la policia no aconsegueix trobar-la.
+						</p>
+						
+						<p>
+							Les pistes que has obtingut t'han portat fins a aquesta localització.
+						</p>
+						<p>
+							Has d'entrar per comprovar si la nena es troba aquí.
+						</p>
+					</div>
+					<img id="tancar_notebook" src="images/arrow_black.png" onclick="close_notebook()"> 
+				</div>
+				<div id="entrar" onclick="entrar_pantalla2()">
+					<img id="fletxa1" src="images/arrow.png">
+				</div>
+				
+				<audio id="birds" autoplay>
+					<source src="audio/Birds.mp3" type="audio/mp3">
+				</audio>
+			</div>
+			
+			<div id="pantalla2">
+				<img id="background_image2" src="images/image2.jpg">
+            	<img id="fletxa_sortir" src="images/arrow.png" onclick="sortir_fora()">
+				<img id="fletxa_pujar" src="images/arrow.png"  onclick="pujar()">
+			</div>
+
+			<div id="pantalla3">
+				<img id="background_image3" src="images/image3.png">
+				<img id="fletxa_esquerra1" src="images/arrow.png" onclick="esquerra1()">
+				<img id="fletxa_dreta1" src="images/arrow.png"  onclick="dreta1()">
+				<img id="fletxa_endavant1" src="images/arrow.png"  onclick="endavant1()">
+				<img id="fletxa_tornar_pantalla2" src="images/arrow.png"  onclick="tornar_pantalla2()">
+			</div>
+
+			<div id="pantalla4">
+				<img id="background_image4" src="images/image5.jpg">
+				<img id="fletxa2_tornar_pantalla3" src="images/arrow.png"  onclick="tornar_pantalla3_2()">
+				<img id="simbol1" src="images/pentagram.png" onclick="ampliar_simbol_function()">
+                <img id="fletxa_pantalla7" onclick="entrar_pantalla7()" src="images/arrow.png">
+                <img id="palet" src="images/palet.png" onclick="moure_palet()">
+			</div>
+			
+			<div id="pantalla5">
+				<img id="background_image5" src="images/image4.jpg">
+				<img id="book_cover" src="images/book_cover.png" onclick="book_cover_animation()">
+				<img id="fletxa1_tornar_pantalla3" src="images/arrow.png" onclick="tornar_pantalla3_1()">
+				<div id="book" onclick="ampliar_book()">
+                	<img src="images/ancient_book.png" id="ancient_book">
+                	<img src="images/page.png" class="page" id="pagina"> 
+                	<div id="intro_text">
+                   <h3>La palabra de vida</h3>
+                    <p>
+                        Lo que era desde el principio,lo que hemos oído, lo que hemos visto con nuestros ojos, lo que hemos contemplado, y palparon nuestras manos tocante al Verbo de vida (porque la vida fue manifestada, y la hemos visto, y testificamos, y os anunciamos la vida eterna, la cual estaba con el Padre, y se nos manifestó); lo que hemos visto y oído, eso os anunciamos, para que también vosotros tengáis comunión con nosotros; y nuestra comunión verdaderamente es con el Padre, y con su Hijo Jesucristo. Estas cosas os escribimos, para que vuestro gozo sea cumplido.
+                    </p>
+                    <h3>Dios es luz</h3>
+                    <p> 
+                        Éste es el mensaje que hemos oído de él, y os anunciamos: Dios es luz, y no hay ningunas tinieblas en él. Si decimos que tenemos comunión con él, y andamos en tinieblas, mentimos, y no practicamos la verdad; pero si andamos en luz, como él está en luz, tenemos comunión unos con otros, y la sangre de Jesucristo su Hijo nos limpia de todo pecado. Si decimos que no tenemos pecado, nos engañamos a nosotros mismos, y la verdad no está en nosotros. Si confesamos nuestros pecados, él es fiel y justo para perdonar nuestros pecados, y limpiarnos de toda maldad. Si decimos que no hemos pecado, le hacemos a él mentiroso, y su palabra no está en nosotros.
+                    </p>
+                </div>
+                <div id="intro_text2" class="">
+                    <h3>Cristo, nuestro abogado</h3>
+                    <p>
+                        Hijitos míos, estas cosas os escribo para que no pequéis; y si alguno hubiere pecado, abogado tenemos para con el Padre, a Jesucristo el justo. Y él es la propiciación por nuestros pecados; y no solamente por los nuestros, sino también por los de todo el mundo. Y en esto sabemos que nosotros le conocemos, si guardamos sus mandamientos. El que dice: Yo le conozco, y no guarda sus mandamientos, el tal es mentiroso, y la verdad no está en él; pero el que guarda su palabra, en éste verdaderamente el amor de Dios se ha perfeccionado; por esto sabemos que estamos en él. El que dice que permanece en él, debe andar como él anduvo.
+                    </p>
+                    <h3>El nuevo mandamiento</h3>
+                    <p> 
+                        Hermanos, no os escribo mandamiento nuevo, sino el mandamiento antiguo que habéis tenido desde el principio; este mandamiento antiguo es la palabra que habéis oído desde el principio. Sin embargo, os escribo un mandamiento nuevo, que es verdadero en él y en vosotros, porque las tinieblas van pasando, y la luz verdadera ya alumbra. El que dice que está en la luz, y aborrece a su hermano, está todavía en tinieblas. El que ama a su hermano, permanece en la luz, y en él no hay tropiezo. Pero el que aborrece a su hermano está en tinieblas, y anda en tinieblas, y no sabe a dónde va, porque las tinieblas le han cegado los ojos.
+                    </p>
+					<img id="arrow1" class="book_arrow" src="images/arrow2.png" onclick="passar_pagina1()">
+                </div>
+                
+                <div id="intro_text3" class="">
+                    <p>
+						Éste es anticristo, el que niega al Padre y al Hijo. 
+                        Os escribo a vosotros, hijitos, porque vuestros pecados os han sido perdonados por su nombre. Os escribo a vosotros, padres, porque conocéis al que es desde el principio. Os escribo a vosotros, jóvenes, porque habéis vencido al maligno. Os escribo a vosotros, hijitos, porque habéis conocido al Padre. Os he escrito a vosotros, padres, porque habéis conocido al que es desde el principio. Os he escrito a vosotros, jóvenes, porque sois fuertes, y la palabra de Dios permanece en vosotros, y habéis vencido al maligno.
+						No améis al mundo, ni las cosas que están en el mundo. Si alguno ama al mundo, el amor del Padre no está en él. Porque todo lo que hay en el mundo, los deseos de la carne, los deseos de los ojos, y la vanagloria de la vida, no proviene del Padre, sino del mundo. Y el mundo pasa, y sus deseos; pero el que hace la voluntad de Dios permanece para siempre.
+                    </p>
+                    <h3>El anticristo</h3>
+                    <p>
+						Hijitos, ya es el último tiempo; y según vosotros oísteis que el anticristo viene, así ahora han surgido muchos anticristos; por esto conocemos que es el último tiempo. Salieron de nosotros, pero no eran de nosotros; porque si hubiesen sido de nosotros, habrían permanecido con nosotros; pero salieron para que se manifestase que no todos son de nosotros. Pero vosotros tenéis la unción del Santo, y conocéis todas las cosas. No os he escrito como si ignoraseis la verdad, sino porque la conocéis, y porque ninguna mentira procede de la verdad. 
+                    </p>
+					<img id="arrow2" class="book_arrow" src="images/arrow1.png" onclick="passar_pagina2()">
+                </div>
+				
+				<div id="intro_text4" class="">
+                    <p>
+						¿Quién es el mentiroso, sino el que niega que Jesús es el Cristo?
+						Éste es anticristo, el que niega al Padre y al Hijo. Todo aquel que niega al Hijo, tampoco tiene al Padre. El que confiesa al Hijo, tiene también al Padre. Lo que habéis oído desde el principio, permanezca en vosotros. Si lo que habéis oído desde el principio permanece en vosotros, también vosotros permaneceréis en el Hijo y en el Padre. Y ésta es la promesa que él nos hizo, la vida eterna.
+						Os he escrito esto sobre los que os engañan. Pero la unción que vosotros recibisteis de él permanece en vosotros, y no tenéis necesidad de que nadie os enseñe; así como la unción misma os enseña todas las cosas, y es verdadera, y no es mentira, según ella os ha enseñado, permaneced en él.
+						Y ahora, hijitos, permaneced en él, para que cuando se manifieste, tengamos confianza, para que en su venida no nos alejemos de él avergonzados.
+                    </p>
+					<h3>
+						El Espíritu de Dios y el espíritu del anticristo
+					</h3>
+					<p>
+						Amados, no creáis a todo espíritu, sino probad los espíritus si son de Dios; porque muchos falsos profetas han salido por el mundo. En esto conoced el Espíritu de Dios: Todo espíritu que confiesa que Jesucristo ha venido en carne, es de Dios; y todo espíritu que no confiesa que Jesucristo ha venido en carne, no es de Dios; y éste es el espíritu del anticristo, el cual vosotros habéis oído que viene, y que ahora ya está en el mundo.
+					</p>
+                </div>
+            </div>
+			</div>
+			
+			<div id="pantalla6">
+				<img id="background_image6" src="images/image7.png">
+				<img id="fletxa3_tornar_pantalla3" src="images/arrow.png" onclick="tornar_pantalla3_3()">
+                <img id="fletxa_secreta" src="images/arrow.png" onclick="entrada_secreta()">
+				<div id="contenidor_piano" onclick="ampliar_piano_function()">
+					<input id="piano_img" type="image" src="/images/piano.png" onkeypress="Piano_Keys(event)" >
+				</div>
+                
+			</div>
+            
+            <div id="pantalla7">
+				<img id="background_image7" src="images/image6.jpg">
+                <img id="blood_image" src="images/blood.png">
+                <img id="home_icon1" src="images/home.png" onclick="tornar_menu_principal()">
+			</div>
+            
+            <div id="pantalla8"> 
+                <img id="background_image8" src="images/image8.jpg">
+                 <p id="text_final"> LA NENA HA SIGUT POSSEIDA PER L'ANTICRIST</p>
+                <img id="home_icon1" src="images/home.png" onclick="tornar_menu_principal()">
+            </div>
+			
+			<div id="contenidor_pedra1" onclick="recollir_pedra1();deixar_pedra1();">
+					<img id="pedra1" src="images/symbol_4.png">
+			</div>
+			
+			<div id="contenidor_pedra2" onclick="recollir_pedra2();deixar_pedra2();">
+					<img id="pedra2" src="images/symbol_2.png">
+               
+			</div>
+			
+			<div id="contenidor_pedra3" onclick="recollir_pedra3();deixar_pedra3();">
+					<img id="pedra3" src="images/symbol_3.png">
+			</div>
+            
+            <div id="contenidor_pedra4" onclick="recollir_pedra4();deixar_pedra4();"> 
+                <img id="pedra4" src="images/symbol_1.png">
+            </div>
+            
+        </div>
+        
+        <audio id="demon_girl">
+            <source src="audio/Little_Demon_Girl.mp3" type="audio/mp3">
+        </audio>
+        
+        <audio id="strange_sound">
+            <source src="audio/Strange.mp3" type="audio/mp3">
+        </audio>
+        
+        <audio id="chainsaw">
+            <source src="audio/chainsaw.mp3" type="audio/mp3">
+        </audio>
+		<audio id="water">
+            <source src="audio/water_drops.mp3" type="audio/mp3">
+		</audio>
+		<audio id="pujar_escales">
+			<source src="audio/Creaky_Stairs.mp3" type="audio/mp3">
+		</audio>
+		
+        <audio id="scary_scream">
+            <source src="audio/Scary_Scream.mp3" type="audio/mp3">
+        </audio>
+		
+        <audio id="audio_note_01">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_02">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_03">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_04">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_05">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_06">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_07">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_08">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_09">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_10">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_11">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_12">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_13">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_14">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_15">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_16">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_17">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_18">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_19">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_20">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_21">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_22">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_23">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_24">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_25">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_26">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_27">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_28">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_29">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_30">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_31">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_32">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_33">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_34">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_35">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_36">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_37">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_38">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_39">
+            <source type="audio/wav">
+        </audio>
+		
+        <audio id="audio_note_40">
+            <source type="audio/wav">
+        </audio>
+		
+        <script src="javascript/game.js"></script>
+    </body>
+</html>
