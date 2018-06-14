@@ -571,7 +571,7 @@ function entrar_pantalla7(){
 }
 
 function tornar_menu_principal(){
-    document.location.href='../index.html';
+    document.location.href='index.html';
 }
 
 function entrada_secreta(){
