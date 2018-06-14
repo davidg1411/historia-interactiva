@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Historia Interactiva</title>
+         <meta charset="UTF-8">
+        <link href="css/estils.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="contenidor_main_menu">
+			<div id="titol">
+				IN NOMINI ELECTI
+			</div>
+            <div id="contenidor_jugar">
+                <div id="start" onmousedown="play_sound()">
+                    START
+                </div>
+				<div id="credits" onclick="credits()">
+					CREDITS
+				</div>
+				<div id="pantalla_credits">
+					CREAT PER:
+					
+					<p>
+						DAVID GARCIA
+					</p>
+					
+					<p>
+						ADRIA BERTRAN
+					</p>
+					<div id="sortir_credits" onclick="tornar_menu()">
+					</div>
+				</div>
+            </div>
+        </div>
+		
+        <audio id="play_sound">
+            <source src="audio/Scary_Titus_Calen.mp3" type="audio/mp3">
+        </audio>
+		
+        <script src="javascript/main_menu.js"></script>
+    </body>
+</html>

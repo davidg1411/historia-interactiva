@@ -1,0 +1,940 @@
+body{
+    margin: inherit;
+}
+
+/*MENU*/
+
+#contenidor_main_menu{
+    width: 1400px;
+    height: 900px;
+    background: url("../images/main_menu.png");
+}
+
+#titol{
+	position: relative;
+	width: 750px;
+	height: 100px;
+	font-family: 'Cenobyte';
+	font-size: 90px;
+	font-weight: 700;
+	color: white;
+	top: 210px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#contenidor_jugar {
+	position: relative;
+    width: 500px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 320px;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+	font-family: 'Cenobyte';
+	text-align: center;
+}
+
+#start{
+	position: relative;
+    width: 60%;
+    height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+    background: url(../images/title.png);
+	border-style:outset;
+	border-color: rgb(180,105,0);
+	top: 50px;
+}
+
+#credits{
+	position: relative;
+    width: 60%;
+    height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+    background: url(../images/title.png);
+	border-style: outset;
+	border-color: rgb(180,105,0);
+	top: 100px;
+}
+
+#pantalla_credits{
+	position: absolute;
+	width: 99%;
+	height: 85%;
+	background: url(../images/credits.png);
+	border-style: outset;
+	border-color: rgb(180,105,0);
+	top: 0px;
+	visibility: hidden;
+	padding-top: 55px;
+}
+
+#sortir_credits{
+	position: relative;
+	width: 100px;
+	height: 50px;
+	background: url(../images/arrow_credits.png);
+}
+
+#start:hover{
+    cursor: pointer;
+	color: red;
+}
+
+#credits:hover{
+	cursor: pointer;
+	color: red;
+}
+
+@font-face {
+  font-family: 'Cenobyte';
+  src: url('../font/Cenobyte.ttf');
+} 
+
+/*GAME*/
+
+#background{
+    width: 1400px;
+    height: 900px;
+}
+
+/*pantalla1*/
+#pantalla1{
+	width: 1400px;
+    height: 900px;
+    left: 0px;
+}
+
+#background_image1{
+    width: 1400px;
+    height: 900px;
+    position: absolute;
+    z-index: -1;
+}
+
+#notebook{
+	position: relative;
+	width: 800px;
+	height: 600px;
+	left: 250px;
+	top: 150px;
+}
+
+#notebook_img{
+	width: 100%;
+	height: 100%;
+}
+
+#tancar_notebook{
+	position: absolute;
+	width: 90px;
+	height: 80px;
+	left: 580px;
+	top: 500px;
+}
+
+#notebook_text{
+	position: absolute;
+	width: 300px;
+	height: 500px;
+	top: 50px;
+	left: 75px;
+	transform: rotate(2deg);
+}
+
+@keyframes animacio_notebook {
+    90%  {visibility: hidden;}
+    100%   {transform: translate(300px, 450px) scale(0,0);
+    visibility: hidden;}
+}
+
+.notebook_tancar{
+    animation-name: animacio_notebook;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#entrar{
+	position: absolute;
+	width: 100px;
+	height: 75px;
+	left: 600px;
+	top: 700px;
+	visibility: hidden;
+}
+
+#fletxa1{
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes animacio_fletxa_entrar {
+	0% {transform: rotate(-90deg) scale(1,0);}
+    100%   {transform: rotate(-90deg) scale(2,2);}
+}
+
+.entrar_fletxa{
+    animation-name: animacio_fletxa_entrar;
+    animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+.entrar_fletxa:hover{
+	cursor: pointer;
+}
+
+#contenidor_pedra1{
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	left: 200px;
+	top: 750px;
+	transform: rotateY(-20deg) rotateZ(10deg);
+	z-index: 100;
+}
+
+#pedra1{
+	width: 100%;
+	height: 100%;
+}
+
+#contenidor_pedra1:hover{
+	transform: scale(5,5);
+	transition-duration: 1s;
+	cursor: pointer;
+}
+
+@keyframes animacio_recollir_pedra1 {
+	0% {transform: translate(0px,0px) scale(1,1);}
+    100% {transform: translate(910px,105px) scale(2,2);}
+}
+
+.pedra1_class{
+	animation-name: animacio_recollir_pedra1;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+
+#book{
+	position: relative;
+	top: 650px;
+    width: 5%;
+    height: 5%;
+	left: 900px;
+    margin-left: auto;
+    margin-right: auto;
+	position: absolute;
+	font-size: 0.8px;
+}
+
+#ancient_book{
+    width: 100%;
+    height: 100%;
+}
+
+#intro_text{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    top: 8%;
+    left: 12%;
+    font-family: 'bible_font';
+    z-index: 1;
+	transform: rotate(1deg);
+}
+
+@keyframes animacio_text1 {
+    30%  {visibility: hidden;}
+    100%   {transform: translate(-31px, 0px) scale(-1,1);
+    visibility: hidden;}
+}
+
+@keyframes reverse_animacio_text1 {
+	0% {transform: translate(-31px, 0px) scale(-1,1);
+    visibility: hidden;}
+    30%  {visibility: hidden;}
+    100%   {transform: translate(0px, 0px) scale(1,1);
+    visibility: visible;}
+}
+
+@keyframes animacio_text2 {
+    0%   {transform: translate(0px, 0px) scale(-1,1);}
+    30%  {visibility: hidden;}
+    100%   {transform: translate(-31px, 0px) scale(1,1);
+    visibility: visible;}
+}
+
+@keyframes reverse_animacio_text2 {
+	0% {transform: translate(-31px, 0px) scale(1,1);
+	visibility: visible;}
+    30%  {visibility: hidden;}
+    100%   {transform: translate(0px, 0px) scale(-1,1);
+    visibility: hidden;}
+}
+
+@keyframes animacio_text3 {
+    30%  {visibility: hidden;}
+    100%   {visibility: visible;}
+}
+
+.text1{
+    animation-name: animacio_text1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.text1_reverse{
+    animation-name: reverse_animacio_text1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.text2_reverse{
+    animation-name: reverse_animacio_text2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.text2{
+    animation-name: animacio_text2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#intro_text2{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    top: 8%;
+    left: 55%;
+    font-family: 'bible_font';
+    z-index: 10;
+}
+
+#intro_text3{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    top: 8%;
+    left: 55%;
+    font-family: 'bible_font';
+    z-index: 10;
+    visibility: hidden;
+}
+
+#intro_text4{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    top: 8%;
+    left: 55%;
+    font-family: 'bible_font';
+    z-index: 5;
+}
+
+@font-face {
+  font-family: 'bible_font';
+  src: url('../font/Bible.ttf');
+} 
+
+.page{
+    position: absolute;
+    width: 46%;
+    height: 95%;
+    top: 1%;
+    left: 49.5%;
+    transform-origin: 48.5%;
+    transition-property: transform, transform-origin;
+    transition-duration: 5s;
+    z-index: 7;
+}
+
+.book_arrow{
+	position: absolute;
+	width: 17%;
+	height: 8%;
+	left: 50%;
+	top: 97%;
+}
+
+/*pantalla2*/
+#pantalla2{
+    width: 1400px;
+    height: 900px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	visibility: hidden;
+}
+
+#background_image2{
+	width: 100%;
+	height: 100%;
+}
+
+#fletxa_pujar{
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	z-index: 5;
+	top: 500px;
+	left: 1100px;
+	transform: rotate(-90deg);
+}
+
+#fletxa_pujar:hover{
+	cursor: pointer;
+}
+
+#fletxa_sortir{
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	z-index: 5;
+	top: 750px;
+	left: 700px;
+	transform: rotate(90deg);
+}
+
+#fletxa_sortir:hover{
+	cursor: pointer;
+}
+
+#contenidor_pedra4{
+	position: absolute;
+	width: 30px;
+	height: 50px;
+	left: 820px;
+	top: 600px;
+	z-index: 10;
+}
+
+#pedra4{
+	width: 100%;
+	height: 100%;
+}
+
+#contenidor_pedra4:hover{
+	transform: scale(5,5);
+	transition-duration: 1s;
+	cursor: pointer;
+}
+
+@keyframes animacio_recollir_pedra4 {
+	0% {transform: translate(0px,0px) scale(1,1);}
+    100% {transform: translate(360px,235px) scale(1,1);}
+}
+
+.pedra4_class{
+	animation-name: animacio_recollir_pedra4;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+/*pantalla3*/
+
+#pantalla3{
+    width: 1400px;
+    height: 900px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	visibility: hidden;
+}
+
+#background_image3{
+	width: 100%;
+	height: 100%;
+}
+
+#fletxa_tornar_pantalla2{
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	z-index: 5;
+	top: 750px;
+	left: 650px;
+	transform: rotate(90deg);
+}
+
+#fletxa_tornar_pantalla2:hover{
+	cursor: pointer;
+}
+
+#fletxa_endavant1{
+	position: absolute;
+	width: 75px;
+	height: 50px;
+	z-index: 5;
+	top: 350px;
+	left: 690px;
+	transform: rotate(-90deg);
+}
+
+#fletxa_endavant1:hover{
+	cursor: pointer;
+}
+
+#fletxa_dreta1{
+	position: absolute;
+	width: 75px;
+	height: 50px;
+	z-index: 5;
+	top: 300px;
+	left: 880px;
+}
+
+#fletxa_dreta1:hover{
+	cursor: pointer;
+}
+
+#fletxa_esquerra1{
+	position: absolute;
+	width: 75px;
+	height: 50px;
+	z-index: 5;
+	top: 300px;
+	left: 500px;
+	transform: rotate(-180deg);
+}
+
+#fletxa_esquerra1:hover{
+	cursor: pointer;
+}
+
+/* pantalla4 */
+
+#pantalla4{
+    width: 1400px;
+    height: 900px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	visibility: hidden;
+}
+
+#background_image4{
+	width: 100%;
+	height: 100%;
+}
+
+#simbol1{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	z-index: 5;
+	top: 300px;
+	left: 620px;
+}
+
+#simbol1:hover{
+	cursor: pointer;
+}
+
+@keyframes animacio_simbol {
+	0% {transform: translate(0px,0px) scale(1,1);}
+    100% {transform: translate(0px,0px) scale(2,2);}
+}
+
+.simbol_class1{
+	animation-name: animacio_simbol;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes reverse_animacio_simbol {
+	0% {transform: translate(0px,0px) scale(2,2);}
+    100% {transform: translate(0px,0px) scale(1,1);}
+}
+
+.simbol_class2{
+	animation-name: reverse_animacio_simbol;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+#fletxa2_tornar_pantalla3{
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	top: 750px;
+	left: 650px;
+	transform: rotate(90deg);
+	z-index: 50;
+}
+
+#fletxa2_tornar_pantalla3:hover{
+	cursor: pointer;
+}
+
+#fletxa_pantalla7{
+    position: absolute;
+    width: 75px;
+	height: 50px;
+	top: 450px;
+	left: 460px;
+	transform: rotate(-90deg);
+	z-index: 50;
+}
+
+#fletxa_pantalla7:hover{
+	cursor: pointer;
+}
+
+#contenidor_pedra3{
+	position: absolute;
+	width: 30px;
+	height: 25px;
+	left: 820px;
+	top: 600px;
+	transform: rotateY(-5deg) rotateZ(4deg);
+	z-index: 100;
+	visibility: hidden;
+}
+
+#pedra3{
+	width: 100%;
+	height: 100%;
+}
+
+#contenidor_pedra3:hover{
+	transform: scale(5,5);
+	transition-duration: 1s;
+	cursor: pointer;
+}
+
+@keyframes animacio_recollir_pedra3 {
+	0% {transform: translate(0px,0px) scale(1,1);}
+    100% {transform: translate(480px,250px) scale(1.5,1.5);}
+}
+
+.pedra3_class{
+	animation-name: animacio_recollir_pedra3;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+#palet{
+    width: 100px;
+    height: 75px;
+    position: absolute;
+    top: 550px;
+    left: 770px;
+    z-index: 1500;
+}
+
+/* pantalla5 */
+
+#pantalla5{
+    width: 1400px;
+    height: 900px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	visibility: hidden;
+}
+
+#background_image5{
+	width: 100%;
+	height: 100%;
+}
+
+#fletxa1_tornar_pantalla3{
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	top: 750px;
+	left: 650px;
+	transform: rotate(90deg);
+	z-index: 50;
+}
+
+#fletxa1_tornar_pantalla3:hover{
+	cursor: pointer;
+}
+
+#book_cover{
+	position: absolute;
+	width: 60px;
+	height: 50px;
+	z-index: 15;
+	top: 650px;
+	left: 905px;
+	transform: rotate(50deg);
+}
+
+@keyframes animacio_book{
+	0%   {transform:  translate(0px, 0px) scale(1,1)}
+    100%   {transform: translate(-290px, -250px) scale(17,17);}
+}
+
+.book_class{
+	animation-name: animacio_book;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#contenidor_pedra2{
+	position: absolute;
+	width: 30px;
+	height: 50px;
+	left: 350px;
+	top: 385px;
+	transform: rotateY(-5deg) rotateZ(4deg);
+	z-index: 100;
+	visibility: hidden;
+}
+
+#pedra2{
+	width: 100%;
+	height: 100%;
+}
+
+#contenidor_pedra2:hover{
+	transform: scale(5,5);
+	transition-duration: 1s;
+	cursor: pointer;
+}
+
+@keyframes animacio_recollir_pedra2 {
+	0% {transform: translate(0px,0px) scale(1,1);}
+    100% {transform: translate(890px,450px) scale(1,1);}
+}
+
+.pedra2_class{
+	animation-name: animacio_recollir_pedra2;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+/* pantalla6 */
+
+#pantalla6{
+    width: 1400px;
+    height: 900px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	visibility: hidden;
+}
+
+#background_image6{
+	width: 100%;
+	height: 100%;
+}
+
+#fletxa_secreta{
+    width: 75px;
+    height: 50px;
+    position: absolute;
+    left: 700px;
+    top: 550px;
+    transform: rotate(-90deg);
+	visibility: hidden;
+}
+
+#fletxa_secreta:hover{
+    cursor: pointer;
+}
+
+#fletxa3_tornar_pantalla3{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    left: 600px;
+    top: 750px;
+    transform: rotate(90deg);
+}
+
+#fletxa3_tornar_pantalla3:hover{
+    cursor: pointer;
+}
+
+#contenidor_piano{
+	width: 250px;
+	height: 75px;
+	position: absolute;
+	left: 370px;
+	top: 530px;
+}
+
+#piano_img{
+	width: 100%;
+	height: 100%;
+    visibility: hidden;
+}
+
+#contenidor_piano:hover{
+	cursor: pointer;
+}
+
+@keyframes animacio_piano_img {
+    0%{transform: translate(0px,0px) scale(1,1);}
+    100%{transform: translate(250px,-100px) scale(3,3);}
+}
+
+.piano_class1{
+	animation-name: animacio_piano_img;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes reverse_animacio_piano_img {
+     0%{transform: translate(250px,-100px) scale(3,3); visibility: visible}
+     100%{transform: translate(0px,0px) scale(1,1);}
+}
+
+.piano_class2{
+	animation-name: reverse_animacio_piano_img;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+/* pantalla7 */
+
+#pantalla7{
+    width: 1400px;
+    height: 900px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	visibility: hidden;
+}
+
+#background_image7{
+	width: 100%;
+	height: 100%;
+}
+
+#blood_image{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 5;
+    left: 550px;
+    top: 350px;
+    visibility: hidden;
+}
+
+@keyframes blood_animacio{
+    0%{opacity: 0.0; transform: translate(0px,0px) scale(1,1); visibility: visible;}
+    100%{opacity: 1.0; transform: scale(10,10); visibility: visible;}
+}
+
+.blood_class{
+	animation-name: blood_animacio;
+    animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+#home_icon1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 10;
+    left: 1200px;
+    top: 750px;
+}
+
+#home_icon:hover{
+    cursor: pointer;
+}
+
+/* pantalla8 */
+
+#pantalla8{
+    width: 1400px;
+    height: 900px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	visibility: hidden;
+}
+
+#background_image8{
+	width: 100%;
+	height: 100%;
+}
+
+/* */
+#contenidor_pedra2{
+	visibility: hidden;
+}
+
+#contenidor_pedra3{
+	visibility: hidden;
+}
+
+#contenidor_pedra4{
+	visibility: hidden;
+}
+
+@keyframes animacio_deixar_pedra1 {
+    0% {transform: translate(910px,105px) scale(2,2);}
+	100% {transform: translate(400px,-490px) scale(1.5,1.5);}
+}
+
+.deixar_pedra1{
+	animation-name: animacio_deixar_pedra1;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes animacio_deixar_pedra2 {
+    0% {transform: translate(890px,450px) scale(1,1);}
+	100% {transform: translate(205px,0px) scale(1,1);}
+}
+
+.deixar_pedra2{
+	animation-name: animacio_deixar_pedra2;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes animacio_deixar_pedra3 {
+    0% {transform: translate(480px,250px) scale(1.5,1.5);}
+	100% {transform: translate(-65px,-345px) scale(1.25,1.25);}
+}
+
+.deixar_pedra3{
+	animation-name: animacio_deixar_pedra3;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes animacio_deixar_pedra4 {
+	0% {transform: translate(360px,235px) scale(1,1);}
+    100% {transform: translate(-20px,-215px) scale(1,1);} 
+}
+
+.deixar_pedra4{
+	animation-name: animacio_deixar_pedra4;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes animacio_text_final {
+    0%{transform: translate(0px,0px) scale(1,1);}
+    100%{transform: translate(100px,100px) scale(3,3);}
+}
+
+#text_final{
+    text-align: center;
+    color: rgb(255,50,0);
+    position: absolute;
+    left: 500px;
+    top: 400px;
+    width: 300px;
+    height: 100px;
+    animation-name: animacio_text_final;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+    font-family: 'Cenobyte';
+}
